@@ -20,7 +20,7 @@ def read_version(filename='cuesdk/version.py'):
 arch, exetype = platform.architecture()
 system = platform.system().lower()
 
-if not system == 'windows':
+if not system in ['windows', 'darwin']:
     msg = "{} system is not supported".format(system)
     raise RuntimeError(msg)
 
@@ -55,6 +55,7 @@ setup(
         'Intended Audience :: Developers',
         'Intended Audience :: End Users/Desktop',
         'License :: OSI Approved :: MIT License',
+        'Operating System :: MacOS :: MacOS X',
         'Operating System :: Microsoft :: Windows',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
