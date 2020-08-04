@@ -27,7 +27,7 @@ This repository is dedicated for a `cuesdk` package on [PyPI](https://pypi.org/)
 
 # Installing
 
-You can install the package from PyPI:
+You can install the package with pip:
 
 ```sh
    $ python3 -m pip install -U git+https://github.com/thops/cue-sdk-python.git
