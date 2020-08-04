@@ -1,5 +1,6 @@
 import sys
 import os
+import platform
 from ctypes import (CDLL, CFUNCTYPE, POINTER, sizeof, c_bool, c_char, c_int32,
                     c_void_p)
 from .enums import (CorsairAccessMode, CorsairError, CorsairLedId,
@@ -12,9 +13,13 @@ __all__ = ['CorsairNativeApi']
 
 
 def get_library_path():
-    suffix = '.x64' if sizeof(c_void_p) == 8 else ''
-    lib_name = 'CUESDK' + suffix + '_2017.dll'
-    return os.path.join(os.path.dirname(__file__), 'bin', lib_name)
+    if platform.system() == "Windows":
+        suffix = '.x64' if sizeof(c_void_p) == 8 else ''
+        lib_name = 'CUESDK' + suffix + '_2017.dll'
+        return os.path.join(os.path.dirname(__file__), 'bin/Windows', lib_name)
+    elif platform.system() == "Darwin":
+        lib_name = 'CUESDK'
+        return '/Library/Frameworks/CUESDK.Framework/CUESDK'
 
 
 def load_library(library_path):
