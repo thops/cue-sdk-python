@@ -13,11 +13,16 @@ This repository is dedicated for a `cuesdk` package on [PyPI](https://pypi.org/)
 
 # Prerequisites
 
-- `cuesdk` works on Windows platform only.
+- `cuesdk` works on Windows or MacOS platforms only.
 - Python 3.5 or higher. Support for earlier versions of Python is not provided. Python 2.7 or lower is not supported.
-- Microsoft Visual C++ Redistributable for Visual Studio 2017.
-  - x86 https://aka.ms/vs/15/release/VC_redist.x86.exe
-  - x64 https://aka.ms/vs/15/release/VC_redist.x64.exe 
+- Windows:
+  - Microsoft Visual C++ Redistributable for Visual Studio 2017.
+    - x86 https://aka.ms/vs/15/release/VC_redist.x86.exe
+    - x64 https://aka.ms/vs/15/release/VC_redist.x64.exe 
+- MacOS:
+  - SDK must be installed manually
+  - Download latest dmg from https://github.com/CorsairOfficial/cue-sdk/releases/
+  - Copy CUESDK.Framework into /Library/Frameworks/
 
 # Installing
 
