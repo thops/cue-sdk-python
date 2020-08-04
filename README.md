@@ -21,8 +21,9 @@ This repository is dedicated for a `cuesdk` package on [PyPI](https://pypi.org/)
     - x64 https://aka.ms/vs/15/release/VC_redist.x64.exe 
 - MacOS:
   - SDK must be installed manually
-  - Download latest dmg from https://github.com/CorsairOfficial/cue-sdk/releases/
-  - Copy CUESDK.Framework into /Library/Frameworks/
+    - Download latest dmg from https://github.com/CorsairOfficial/cue-sdk/releases/
+    - Copy CUESDK.Framework into /Library/Frameworks/
+  - example/fx.py won't work because it uses msvcrt for keypress handling. So sorry, but I don't care ;-)
 
 # Installing
 
